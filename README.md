@@ -9,7 +9,9 @@ Employee Management System made with MERN stack
 Fork the project download the code open your favorite IDE
 
 1. Open terminal type command
-
+```
+cd server
+```
 ``` 
 npm i
 ```
