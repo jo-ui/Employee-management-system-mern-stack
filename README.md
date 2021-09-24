@@ -45,4 +45,4 @@ Check it out here-> https://ems-mern-stack.herokuapp.com/
 
 ## Screenshots
 
-Screenshot/Screenshot 2021-09-24 234430.png
+https://github.com/jo-ui/Employee-management-system-mern-stack/blob/5297d367755982c10b5a71703cec1dfd62b7aacd/Screenshot/Screenshot%202021-09-24%20234430.png
