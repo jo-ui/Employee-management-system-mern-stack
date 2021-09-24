@@ -42,3 +42,7 @@ npm start
 - Styled-components
 
 Check it out here-> https://ems-mern-stack.herokuapp.com/
+
+## Screenshots
+
+Screenshot/Screenshot 2021-09-24 234430.png
