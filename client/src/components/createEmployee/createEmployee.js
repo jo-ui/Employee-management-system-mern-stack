@@ -31,19 +31,19 @@ export default function Create() {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Employee Id" variant="outlined" value={employee.empId} onChange={(event) =>{
+      <TextField id="outlined-basic" label="Employee Id" variant="outlined" value={employee.empId} required= "ID Required" onChange={(event) =>{
           setEmployee({ ...employee, empId: event.target.value})
       }} />
-      <TextField id="outlined-basic" label="Full name" variant="outlined" value={employee.employeeName} onChange={(event) =>{
+      <TextField id="outlined-basic" label="Full name" variant="outlined" value={employee.employeeName} required= "Name Required" onChange={(event) =>{
           setEmployee({ ...employee, employeeName: event.target.value})
       }}/>
-      <TextField id="outlined-basic" label="Date of Birth(mm/dd/yy)" variant="outlined" value={employee.birthDate} onChange={(event) =>{
+      <TextField id="outlined-basic" label="Date of Birth(mm/dd/yy)" variant="outlined" value={employee.birthDate} required= "Birth date Required" onChange={(event) =>{
           setEmployee({ ...employee, birthDate: event.target.value})
       }}/>
-      <TextField id="outlined-basic" label="Gender" variant="outlined" value={employee.gender} onChange={(event) =>{
+      <TextField id="outlined-basic" label="Gender" variant="outlined" value={employee.gender} required= "Gender Required" onChange={(event) =>{
           setEmployee({ ...employee, gender: event.target.value})
       }}/>
-      <TextField id="outlined-basic" label="Salary" variant="outlined" value={employee.salary} onChange={(event) =>{
+      <TextField id="outlined-basic" label="Salary" variant="outlined" value={employee.salary} required= "Salary Required" onChange={(event) =>{
           setEmployee({ ...employee, salary: event.target.value})
       }}/>
       <Button variant="contained" onClick={createEmployee}>Submit</Button>
@@ -51,3 +51,4 @@ export default function Create() {
     </>
   );
 }
+
