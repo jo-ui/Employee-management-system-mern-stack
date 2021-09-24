@@ -34,26 +34,16 @@ export const deleteEmployee = async(req, res) => {
     }
 }
 
-// export const editEmployee = async(req, res) => {
-//     const id = req.params.id;
-
-//     try {
-//         await EmployeeData.findByIdAndUpdate(id).exec();
-//         res.send('Successfully updated!')
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
 
 export const editEmployee = async(req, res) => {
         const id = req.params.id;
 
             await EmployeeData.findByIdAndUpdate(id,{
-                empId: '1010',
-                employeeName: 'John',
-                birthDate:'09/11/1998',
-                gender:'MALE',
-                salary:'5000'
+                empId: req.body.empId,
+                employeeName: req.body.employeeName,
+                birthDate: req.body.birthDate,
+                gender: req.body.gender,
+                salary: req.body.Salary,
               },
             function (err, docs) {
 if (err){
@@ -65,35 +55,3 @@ else{
 }
 });
 }
-
-
-/*
-export const editEmployee = async(req, res) => {
-    const id = req.params.id;
-
-        await EmployeeData.findOneAndUpdate(
-    { _id: req.params._id },
-    {
-      $set: {
-        empId: req.body.empId,
-        employeeName: req.body.employeeName,
-        birthDate: req.body.birthDate,
-        gender: req.body.gender,
-        salary: req.body.Salary,
-      }
-    },
-    (err, docs) => {
-      if (err) return res.status(500).json({ msg: err });
-      const msg = {
-        msg: "Employee successfully updated",
-        empId: req.body.empId,
-        employeeName: req.body.employeeName,
-        birthDate: req.body.birthDate,
-        gender: req.body.gender,
-        salary: req.body.salary,
-      };
-      return res.json(msg);
-    }
-  );
-}
-*/
