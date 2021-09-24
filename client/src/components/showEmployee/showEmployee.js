@@ -53,7 +53,18 @@ export default function ShowEmployee() {
     }
 
     const editEmployee = (id) => {
-      axios.put(`http://localhost:5000/employee/${id}`).then( () => {
+      const empId = prompt("Enter ID: ");
+      const employeeName = prompt("Enter name: ");
+      const birthDate = prompt("Enter Date of bith: ");
+      const gender = prompt("Enter Gender: ");
+      const salary = prompt("Enter Salary: ");
+      axios.put(`http://localhost:5000/employee/${id}`,{
+        empId:empId,
+        employeeName:employeeName,
+        birthDate:birthDate,
+        gender:gender,
+        salary:salary
+      }).then( () => {
         window.location.reload(false);
       })
     }
