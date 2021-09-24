@@ -33,6 +33,11 @@ npm i
 npm start
 ```
 
+OR just type
+```
+npm run start_full_app
+```
+
 ## TechStack and Designs
 - Node
 - Express
